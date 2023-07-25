@@ -44,10 +44,11 @@ def connect():
         print(status_df,business_hours_df,timezones_df)
 
         print('Success')
-        # # Store data in PostgreSQL
-        # status_df.to_sql("store_status", conn, if_exists="replace", index=False)
-        # business_hours_df.to_sql("business_hours", conn, if_exists="replace", index=False)
-        # timezones_df.to_sql("store_timezones", conn, if_exists="replace", index=False)
+        
+        # Store data in PostgreSQL
+        status_df.to_sql("store_status", conn, if_exists="replace", index=False)
+        business_hours_df.to_sql("business_hours", conn, if_exists="replace", index=False)
+        timezones_df.to_sql("store_timezones", conn, if_exists="replace", index=False)
 
 	    # close the communication with the PostgreSQL
         cur.close()
